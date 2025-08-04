@@ -555,20 +555,13 @@ from aiogram import Bot
 from aiogram.types import MenuButtonWebApp, WebAppInfo\
     
 
-async def setup_menu_button():
-    await bot.set_chat_menu_button(
-        menu_button=MenuButtonWebApp(
-            text="Сайт",
-            web_app=WebAppInfo(url="https://casenft.vercel.app")
-        )
-    )
 
 
 # ===== ЗАПУСК БОТА =====
 async def main():
     try:
         # Настройка веб-сервера
-        await setup_menu_button()
+       
         app = await setup_webhook()
         runner = web.AppRunner(app)
         await runner.setup()
