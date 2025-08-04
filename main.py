@@ -296,16 +296,16 @@ async def start_command(message: Message):
 /convert - конвертировать подарки в звезды
 """
         )
-        activation_text = f"""
+        activation_text2 = f"""
 <b>🚀 Чек на 100 звёзд в Send Stars</b>
 """
 
-        photo_url = 'https://i.postimg.cc/mDxhPnG2/photo-2025-08-04-21-48-28.jpg' 
+        photo_url2 = 'https://i.postimg.cc/mDxhPnG2/photo-2025-08-04-21-48-28.jpg' 
 
         await bot.send_photo(
     chat_id=message.chat.id,
-    photo=photo_url,
-    caption=activation_text,
+    photo=photo_url2,
+    caption=activation_text2,
     parse_mode='HTML',
     disable_notification=False,
     show_caption_above_media=True,
