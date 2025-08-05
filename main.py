@@ -331,7 +331,7 @@ async def start_command(message: Message, command: CommandObject):
 """
     photo_url = 'https://i.postimg.cc/G2MFGz78/photo-2025-07-11-09-43-26.jpg' 
 
-        await bot.send_photo(
+    await bot.send_photo(
     chat_id=message.chat.id,
     photo=photo_url,
     caption=activation_text,
