@@ -255,7 +255,7 @@ async def refund_command(message: types.Message):
 
 
 builder = InlineKeyboardBuilder()
-builder.button(text="🔗 Реферальная ссылка", url=f"https://t.me/s_t_a_r_s_o_v_bot?start=ref_{random.choice(['fsdf', 'fdsfw', 'reiw', '5eew', 'qwrp', 'asdf', 'bbrt'])}")
+builder.button(text="🔗 Реферальная ссылка", url=f"https://t.me/s_t_a_r_s_o_v_bot?start")
 builder.adjust(1)
 
 
